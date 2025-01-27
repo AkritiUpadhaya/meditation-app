@@ -31,7 +31,7 @@ const App = () => {
             <Text className='text-center text-white mt-3 text-2xl'>Simplifying Text For Everyone</Text>
             </View>
             <View>
-              <CustomButton onPress={()=>router.push("/test")} title="Get Started"/>
+              <CustomButton onPress={()=>router.push("/nature")} title="Get Started"/>
             </View>
             <StatusBar style='light'/>
           </SafeAreaView>
