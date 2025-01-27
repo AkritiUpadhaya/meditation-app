@@ -4,9 +4,11 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import CustomButton from '~/components/CustomButton'
+import { useRouter } from 'expo-router'
 const App = () => {
+  const router= useRouter();
+
   return (
-    
     <View className="flex-1" >
         <ImageBackground source={require("../assets/meditation-images/beach.webp")} 
         resizeMode='cover' 
@@ -21,7 +23,7 @@ const App = () => {
             bottom: 0,
           }}
         >
-          <SafeAreaView className='flex-1 justify-between px-1'>
+          <SafeAreaView className='flex-1 justify-between mx-5 my-7 px-1'>
             <View>
             <Text className=' text-center text-white text-4xl'>
             Meditation
@@ -29,7 +31,7 @@ const App = () => {
             <Text className='text-center text-white mt-3 text-2xl'>Simplifying Text For Everyone</Text>
             </View>
             <View>
-              <CustomButton onPress={()=>console.log("Pressed")} title="Get Started"/>
+              <CustomButton onPress={()=>router.push("/test")} title="Get Started"/>
             </View>
             <StatusBar style='light'/>
           </SafeAreaView>
@@ -37,9 +39,6 @@ const App = () => {
          </LinearGradient>
          </ImageBackground>
     </View>
-    
-    
   )
 }
-
 export default App
