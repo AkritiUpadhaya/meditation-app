@@ -1,7 +1,6 @@
 import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
-import beachImage from "../assets/meditation-images/beach.webp"
-const App = () => {
+const Index = () => {
   return (
     // <View className="flex-1" >
     //     <ImageBackground source={require("../assets/meditation-images/beach.webp")} resizeMode='cover' className="flex-1">
@@ -10,9 +9,10 @@ const App = () => {
       
     // </View>
     <View className="flex-1 justify-center items-center">
-      <Text>Hello World</Text>
+      <Text className='text-xl text-red-600'>Hello World</Text>
     </View>
+    
   )
 }
 
-export default App
+export default Index
