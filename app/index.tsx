@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import CustomButton from '~/components/CustomButton'
 import { useRouter } from 'expo-router'
+import Gradient from '~/components/Gradient'
 const App = () => {
   const router= useRouter();
 
@@ -13,16 +14,20 @@ const App = () => {
         <ImageBackground source={require("../assets/meditation-images/beach.webp")} 
         resizeMode='cover' 
         className="flex-1">
-         <LinearGradient 
-          colors={["rgba(0,0,0,0.2)", "rgba(0,0,0,0.7)"]}
-          style={{ 
+          <Gradient colors={["rgba(0,0,0,0.2)", "rgba(0,0,0,0.7)"]}
+           style={{ 
             position: 'absolute',
             left: 0,
             right: 0,
             top: 0,
             bottom: 0,
           }}
-        >
+          contentStyle={{
+            justifyContent:'space-between',
+            alignItems:'center'
+          }}
+          >
+         
           <SafeAreaView className='flex-1 justify-between mx-5 my-7 px-1'>
             <View>
             <Text className=' text-center text-white text-4xl'>
@@ -36,7 +41,7 @@ const App = () => {
             <StatusBar style='light'/>
           </SafeAreaView>
          
-         </LinearGradient>
+         </Gradient>
          </ImageBackground>
     </View>
   )
