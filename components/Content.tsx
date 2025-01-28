@@ -9,7 +9,7 @@ interface ContentProps {
 
 const Content = ({ children, style }: ContentProps) => {
   return (
-    <SafeAreaView className='flex-1 px-5 py-3' style={style}>
+    <SafeAreaView className='flex-1 px-1' style={style}>
       {children}
     </SafeAreaView>
   )
