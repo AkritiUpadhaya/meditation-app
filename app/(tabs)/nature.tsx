@@ -4,6 +4,7 @@ import Gradient from '~/components/Gradient'
 import { MEDITATION_DATA } from '~/constants/MeditationData'
 import MEDITATION_IMAGES from '~/constants/meditation-images'
 
+
 const Nature = () => {
   return (
     <View className='flex-1'>
