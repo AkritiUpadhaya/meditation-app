@@ -15,24 +15,29 @@ const GuidedAffirmations = ({title, previews}:GuidedAffirmationsProps) => {
         <Text className='text-white text-xl '>{title}</Text>
         </View>
         <View>
-            <FlatList data={previews}
+            <FlatList 
+             data={previews}
+             horizontal= {true}
              showsHorizontalScrollIndicator={false}
              keyExtractor={(item)=>item.id.toString()}
              renderItem={({item})=>(
-                <Link href={`/affirmations/$(item.id)`} asChild >
+                <Link href={{
+                  pathname: "/affirmations",
+                  params: { id: item.id }
+                }} asChild >
                     <Pressable>
                         <View className='h-36 w-32 rounded-md mr-4'>
                             <Image 
                             source={item.image}
                             resizeMode='cover'
                             className='w-full h-full'/>
-
+                            
                         </View>
                     </Pressable>
                 </Link>
-             )}/> 
+             )}
+             /> 
         </View>
-     
     </View>
   )
 }
