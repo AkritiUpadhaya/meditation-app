@@ -1,11 +1,11 @@
-import { View, Text, ImageBackground, Pressable } from 'react-native'
+import { View, Text, ImageBackground, Pressable, ScrollViewComponent, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { router, useLocalSearchParams } from 'expo-router'
 import { GalleryPreviewData } from '~/constants/models/AffirmationGallery';
 import AFFIRMATION_GALLERY from '~/constants/affirmation-gallery';
 import Gradient from '~/components/Gradient';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { ScrollView } from 'react-native-gesture-handler';
+// import { ScrollView } from 'react-native-gesture-handler';
 
 const AffirmationPractice = () => {
     const {itemId} =useLocalSearchParams();
@@ -17,6 +17,7 @@ const AffirmationPractice = () => {
 
             if(affirmationToStart){
                 setAffirmation(affirmationToStart);
+                const affirmationsArray= affirmationToStart.text.split(".")
                 return;
             }
         }
@@ -31,13 +32,14 @@ const AffirmationPractice = () => {
                 <ScrollView className='m-20' showsVerticalScrollIndicator={false}>
                     <View className='h-full justify-center'>
                         <View className='h-4/5 justify-center'>
-                        <Text>
+                        <Text className='text-white text-3xl font-bold'>
                         {affirmation?.text}
                         </Text>
                            
                         </View>
                     </View>
                 </ScrollView>
+                
             </Gradient>
         </ImageBackground>
     </View>
