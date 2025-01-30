@@ -19,6 +19,7 @@ const TabsLayout = () => {
                 <Entypo name="open-book" size={24} color={color} />
             )
          }}/>
+         
     </Tabs>
   )
 }

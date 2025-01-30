@@ -3,6 +3,7 @@ import React from 'react'
 import Gradient from '~/components/Gradient'
 import { MEDITATION_DATA } from '~/constants/MeditationData'
 import MEDITATION_IMAGES from '~/constants/meditation-images'
+import { router, useRouter } from 'expo-router'
 
 
 const Nature = () => {
@@ -20,7 +21,7 @@ const Nature = () => {
           keyExtractor={(item)=> item.id.toString()}
           showsVerticalScrollIndicator={false}
           renderItem={({item})=>(
-            <Pressable onPress={()=>console.log('pressed')}
+            <Pressable onPress={()=>router.push(`/meditate/${item.id-1}`)}
             className='h-48 my-3 rounded-md overflow-hidden'>
               <ImageBackground source={MEDITATION_IMAGES[item.id-1]}
               resizeMode='cover'
