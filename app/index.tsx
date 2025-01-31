@@ -33,7 +33,7 @@ const App = () => {
             <Text className=' text-center text-white text-4xl'>
             Meditation
             </Text>
-            <Text className='text-center text-white mt-3 text-2xl'>Simplifying Text For Everyone</Text>
+            <Text className='text-center text-white mt-3 text-2xl'>Simplifying Meditation For Everyone</Text>
             </View>
             <View>
               <CustomButton onPress={()=>router.push("/nature")} title="Get Started"/>
